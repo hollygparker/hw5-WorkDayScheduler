@@ -44,7 +44,22 @@ $(document).ready(function () {
          }
      }
 
+     let momentTime = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 
+     function color () {
+        var hour = moment().hour();  
+        for (let i = 0; i < timeArray.length; i++) {
+            if (momentTime[i] === hour) {
+                $(timeArray[i]).addClass("present")
+            } else if (momentTime[i] >= hour) {
+                $(timeArray[i]).addClass("future")
+            } else {
+                $(timeArray[i]).addClass("past")
+            }
+        }
+     }
+
+color()
 
 
 
