@@ -25,6 +25,22 @@ $(document).ready(function () {
 
 
     $("#currentDay").text(day);
+
+    
+
+    $(".saveBTN").on('click', function() {
+        var text = $(this).attr('data-value')
+        var input = $('#' + text).val()
+        console.log("this is the input", input)
+        console.log(text)
+        localStorage.setItem("#" + text, input);
+
+    });
+
+    
+
+
+
 })
 
 
