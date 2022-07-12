@@ -37,7 +37,14 @@ $(document).ready(function () {
 
     });
 
-    
+     let timeArray = ["#9", "#10", "#11", "#12", "#1", "#2", "#3", "#4", "#5"]
+     for (let i = 0; i < timeArray.length; i++) {
+         if (localStorage.getItem(timeArray[i])) {
+             $(timeArray[i]).val(localStorage.getItem(timeArray[i]))
+         }
+     }
+
+
 
 
 
